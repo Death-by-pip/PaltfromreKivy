@@ -1,0 +1,19 @@
+AnchorLayout:
+    Display:
+        size: self.scale(root.size)
+        size_hint: None, None
+        pos_hint: {"center_x":.5, "center_y":.5}
+        Background:
+            id: background
+
+<Background>
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            Color:
+                rgb: 0.06, 0.67, 0.95
+        Rectangle:
+            size: self.width, self.height * .2
+            pos: self.pos[0], self.pos[1] + self.height * .8
+            texture: self.cloud_texture
